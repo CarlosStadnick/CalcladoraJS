@@ -1,32 +1,36 @@
-function somar(){
+function somar() {
     //pega valor digitado na caixa de texto dos valores 1,2
     let num1 = parseFloat(document.getElementById('primeiroValor').value);
 
     let num2 = parseFloat(document.getElementById('segundoValor').value);
     //Adiciona conteúdo na tag P com ID resultado
-    document.getElementById('resultado').innerHTML = 'Resultado: ' +(num1 + num2)
+    document.getElementById('resultado').innerHTML = 'Resultado: ' + (num1 + num2)
 }
-function subtrair(){
+function subtrair() {
     //pega valor digitado na caixa de texto dos valores 1,2
     let num1 = parseFloat(document.getElementById('primeiroValor').value);
 
     let num2 = parseFloat(document.getElementById('segundoValor').value);
     //Adiciona conteúdo na tag P com ID resultado
-    document.getElementById('resultado').innerHTML = 'Resultado: ' +(num1 - num2)
+    document.getElementById('resultado').innerHTML = 'Resultado: ' + (num1 - num2)
 }
-function multiplicar(){
+function multiplicar() {
     //pega valor digitado na caixa de texto dos valores 1,2
     let num1 = parseFloat(document.getElementById('primeiroValor').value);
 
     let num2 = parseFloat(document.getElementById('segundoValor').value);
     //Adiciona conteúdo na tag P com ID resultado
-    document.getElementById('resultado').innerHTML = 'Resultado: ' +(num1 * num2)
+    document.getElementById('resultado').innerHTML = 'Resultado: ' + (num1 * num2)
 }
-function dividir(){
+function dividir() {
     //pega valor digitado na caixa de texto dos valores 1,2
     let num1 = parseFloat(document.getElementById('primeiroValor').value);
 
     let num2 = parseFloat(document.getElementById('segundoValor').value);
-    //Adiciona conteúdo na tag P com ID resultado
-    document.getElementById('resultado').innerHTML = 'Resultado: ' +(num1 / num2)
+    if (num2 != 0) {
+        //Adiciona conteúdo na tag P com ID resultado
+        document.getElementById('resultado').innerHTML = 'Resultado: ' + (num1 / num2);
+    }else{
+        document.getElementById('resultado').innerHTML = 'Erro: Não pode ser divisível por zero';
+    }
 }
